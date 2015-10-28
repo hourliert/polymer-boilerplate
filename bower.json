@@ -1,17 +1,22 @@
 {
+  "name": "polymer-seed",
   "version": "0.0.0",
-  "name": "polymer-starter-kit",
-  "private": true,
+  "description": "Polymer seed.",
+  "authors": [
+    "Thomas Hourlier <hourliert@gmail.com> (https://github.com/hourliert)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/hourliert/polymer-seed",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.1.0",
-    "iron-elements": "PolymerElements/iron-elements#^1.0.0",
-    "paper-elements": "PolymerElements/paper-elements#^1.0.1",
-    "platinum-elements": "PolymerElements/platinum-elements#^1.1.0",
-    "neon-elements": "PolymerElements/neon-elements#^1.0.0",
-    "page": "visionmedia/page.js#~1.6.3"
-  },
-  "devDependencies": {
-    "web-component-tester": "*",
-    "test-fixture": "PolymerElements/test-fixture#^1.0.0"
+    "polymer": "~1.2.0",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.0.4"
   }
 }
