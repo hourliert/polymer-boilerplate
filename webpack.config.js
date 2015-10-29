@@ -1,9 +1,9 @@
-'use strict';
+import path from 'path';
 
-module.exports = {
+export default {
   entry: "./src/main.js",
   output: {
-      path: 'build',
+      path: path.join(__dirname, 'build'),
       filename: "bundle.js"
   },
   module: {

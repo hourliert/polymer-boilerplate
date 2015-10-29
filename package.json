@@ -2,9 +2,6 @@
   "name": "polymer-seed",
   "version": "0.0.0",
   "description": "Polymer seed.",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hourliert/polymer-seed.git"
@@ -16,7 +13,13 @@
   },
   "homepage": "https://github.com/hourliert/polymer-seed#readme",
   "devDependencies": {
+    "babel": "^5.8.29",
     "babel-loader": "^5.3.2",
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7",
+    "polybuild": "^1.0.5",
+    "run-sequence": "^1.1.4",
     "webpack": "^1.12.2"
   }
 }
