@@ -1,3 +1,4 @@
-import Polymer from './utils/polymer';
-
-import './elements/app-shell/app-shell';
+window.addEventListener('WebComponentsReady', function() {
+  require('./utils/polymer');
+  require('./elements/app-shell/app-shell');
+});

@@ -3,6 +3,7 @@ import { serve } from './tasks/serve';
 import { bundle, watchBundle } from './tasks/js';
 import { htmlBundle } from './tasks/html';
 import { build } from './tasks/build';
+import './tasks/test';
 
 
 gulp.task('default', ['build']);
