@@ -18,3 +18,12 @@ export function serve() {
 
   gulp.watch(['./build/bundle.js', './src/**/*.html'], reload);
 }
+
+export function serveDist() {
+  browserSync.init({
+    notify: false,
+    server: {
+      baseDir: ['./build'],
+    },
+  });
+}

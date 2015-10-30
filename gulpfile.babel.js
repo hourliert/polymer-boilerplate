@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import { serve } from './tasks/serve';
+import { serve, serveDist } from './tasks/serve';
 import { bundle, watchBundle } from './tasks/js';
 import { htmlBundle } from './tasks/html';
 import { build } from './tasks/build';
@@ -9,6 +9,7 @@ import { clean } from './tasks/clean';
 
 gulp.task('default', ['build']);
 gulp.task('serve', ['bundle:watch'], serve);
+gulp.task('serve:dist', ['build'], serveDist);
 gulp.task('bundle', bundle);
 gulp.task('bundle:watch', watchBundle);
 gulp.task('polybuild', htmlBundle);
