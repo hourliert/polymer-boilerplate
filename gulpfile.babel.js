@@ -5,6 +5,7 @@ import { htmlBundle } from './tasks/html';
 import { build } from './tasks/build';
 import { test, remoteTest } from './tasks/test';
 import { lintWithEslint, lintWithJscs } from './tasks/linter';
+import { clean } from './tasks/clean';
 
 gulp.task('default', ['build']);
 gulp.task('serve', ['bundle:watch'], serve);
@@ -17,3 +18,4 @@ gulp.task('test:remote', remoteTest);
 gulp.task('eslint', lintWithEslint);
 gulp.task('jscs', lintWithJscs);
 gulp.task('lint', ['eslint', 'jscs']);
+gulp.task('clean', clean);

@@ -1,18 +1,18 @@
 import path from 'path';
 
 export default {
-  entry: "./src/main.js",
+  entry: './src/main.js',
   output: {
-      path: path.join(__dirname, 'build'),
-      filename: "bundle.js"
+    path: path.join(__dirname, 'build'),
+    filename: 'bundle.js',
   },
   module: {
     loaders: [
       {
-        loader: "babel-loader",
+        loader: 'babel-loader',
         test: /.js$/,
-        exclude: /node_modules/
-      }
-    ]
-  }
+        exclude: /node_modules/,
+      },
+    ],
+  },
 };
