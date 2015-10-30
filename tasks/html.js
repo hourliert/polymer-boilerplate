@@ -1,10 +1,10 @@
 import gulp from 'gulp';
 import polybuild from 'polybuild';
 
-export function htmlBundle () {
+export function htmlBundle() {
   return gulp.src('./src/index.html')
     .pipe(polybuild({
-      maximumCrush: true
+      maximumCrush: true,
     }))
     .pipe(gulp.dest('./build'));
-};
+}
