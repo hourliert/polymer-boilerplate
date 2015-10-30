@@ -1,8 +1,21 @@
 import Polymer from '../../utils/polymer';
 
-export default new Polymer({
-  is: 'app-shell',
-  ready: function ready() {
-    console.log('app-shell is ready!');
-  },
-});
+class AppShell {
+  beforeRegister() {
+    this.is = 'app-shell';
+    this.properties = {
+      greeting: {
+        type: String,
+        value: 'Wait for it',
+      },
+    };
+  }
+
+  ready() {
+    this.async(() => {
+      this.greeting = 'Hello World!';
+    }, 1500);
+  }
+}
+
+export default new Polymer(AppShell);
