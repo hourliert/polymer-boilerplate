@@ -4,18 +4,12 @@ import runSequence from 'run-sequence';
 
 WCT.gulp.init(gulp);
 
+const REMOTE = process.argv.includes('--remote');
+
 export function test(cb) {
   runSequence(
     'bundle',
-    'test:local',
-    cb
-  );
-}
-
-export function remoteTest(cb) {
-  runSequence(
-    'bundle',
-    'test:remote',
+    !REMOTE ? 'test:local' : 'test:remote',
     cb
   );
 }

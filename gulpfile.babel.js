@@ -1,21 +1,18 @@
 import gulp from 'gulp';
-import { serve, serveDist } from './tasks/serve';
-import { bundle, watchBundle } from './tasks/js';
+import { serve } from './tasks/serve';
+import { bundle } from './tasks/js';
 import { htmlBundle } from './tasks/html';
 import { build } from './tasks/build';
-import { test, remoteTest } from './tasks/test';
+import { test } from './tasks/test';
 import { lintWithEslint, lintWithJscs } from './tasks/linter';
 import { clean } from './tasks/clean';
 
 gulp.task('default', ['build']);
-gulp.task('serve', ['bundle:watch'], serve);
-gulp.task('serve:dist', ['build'], serveDist);
+gulp.task('serve', ['build'], serve);
 gulp.task('bundle', bundle);
-gulp.task('bundle:watch', watchBundle);
 gulp.task('polybuild', htmlBundle);
 gulp.task('build', build);
 gulp.task('test', test);
-gulp.task('test:remote', remoteTest);
 gulp.task('eslint', lintWithEslint);
 gulp.task('jscs', lintWithJscs);
 gulp.task('lint', ['eslint', 'jscs']);

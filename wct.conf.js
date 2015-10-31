@@ -1,15 +1,15 @@
 var path = require('path');
 
 var ret = {
-  'suites': ['src/test'],
-  'webserver': {
-    'pathMappings': []
+  suites: ['src/test'],
+  webserver: {
+    pathMappings: [],
   },
   plugins: {
     local: {
-      browsers: ['chrome', 'firefox', 'safari']
-    }
-  }
+      browsers: ['chrome', 'firefox', 'safari'],
+    },
+  },
 };
 
 var mapping = {};
