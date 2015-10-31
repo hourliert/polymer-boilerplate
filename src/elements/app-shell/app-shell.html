@@ -1,15 +1,54 @@
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../bower_components/paper-spinner/paper-spinner.html">
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../../bower_components/iron-pages/iron-pages.html">
+
+<link rel="import" href="../dashboard-page/dashboard-page.html">
+<link rel="import" href="../about-page/about-page.html">
+<link rel="import" href="../login-page/login-page.html">
+<link rel="import" href="../logout-page/logout-page.html">
 
 <dom-module id="app-shell">
   <style>
     :host {
       display: block;
     }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
   </style>
   <template>
+
     <p>App Shell! Yay!</p>
     <p>[[greeting]]</p>
-    <paper-spinner active></paper-spinner>
+    <a href="/about">
+      <paper-button raised>About</paper-button>
+    </a>
+    <template is="dom-if" if="{{!_isAuth}}">
+      <a href="/login">
+        <paper-button raised>Login</paper-button>
+      </a>
+    </template>
+    <template is="dom-if" if="{{_isAuth}}">
+      <a href="/logout">
+        <paper-button raised>Logout</paper-button>
+      </a>
+    </template>
+    <a href="/dashboard">
+      <paper-button raised>Dasboard</paper-button>
+    </a>
+
+    <iron-pages
+      selected="[[route]]"
+      attr-for-selected="data-route"
+      on-iron-select="_handlePageChange">
+
+      <dashboard-page id="dashboard" data-route="dashboard"></dashboard-page>
+      <about-page id="about" data-route="about"></about-page>
+      <login-page id="login" data-route="login"></login-page>
+      <logout-page id="logout" data-route="logout"></logout-page>
+
+    </iron-pages>
+
   </template>
 </dom-module>

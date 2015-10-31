@@ -1,4 +1,6 @@
+import 'babel-core/polyfill';
+
 window.addEventListener('WebComponentsReady', () => {
-  require('./utils/polymer');
-  require('./elements/app-shell/app-shell');
+  require('./elements');
+  require('./route');
 });

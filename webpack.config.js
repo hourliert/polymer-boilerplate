@@ -1,6 +1,7 @@
 import path from 'path';
 
 export default {
+  devtool: 'cheap-module-eval-source-map',
   entry: './src/main.js',
   output: {
     path: path.join(__dirname, 'build'),

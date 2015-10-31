@@ -1,0 +1,25 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/paper-spinner/paper-spinner.html">
+
+<link rel="import" href="../../../bower_components/login-polyform/login-polyform.html">
+
+<dom-module id="login-page">
+  <style>
+    :host {
+      display: block;
+    }
+    span.error {
+      color: red;
+    }
+  </style>
+  <template>
+    <p>Credentials hint: john | 1234</p>
+
+    <template is="dom-if" if="[[error]]">
+      <span class="error">Wrong credentials</span>
+    </template>
+    <paper-spinner active="[[authenticating]]"></paper-spinner>
+    <login-polyform></login-polyform>
+
+  </template>
+</dom-module>
