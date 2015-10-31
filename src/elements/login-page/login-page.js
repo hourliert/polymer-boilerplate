@@ -1,5 +1,5 @@
 import Polymer from '../../utils/polymer';
-import Router from '../../route';
+import Router from '../../core/router';
 import auth from '../../core/auth';
 
 class LoginPage {
@@ -28,7 +28,7 @@ class LoginPage {
     try {
       const isAuth = await auth.login(ev.detail.username, ev.detail.password);
       if (isAuth) {
-        Router.go('/about');
+        Router.go('/dashboard');
       } else {
         this.error = true;
       }

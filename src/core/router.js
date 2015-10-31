@@ -1,6 +1,6 @@
-import Polymer from './utils/polymer';
+import Polymer from '../utils/polymer';
 import page from 'page';
-import auth from './core/auth';
+import auth from './auth';
 
 class Router {
   constructor() {
