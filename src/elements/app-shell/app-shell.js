@@ -1,6 +1,11 @@
 import Polymer from '../../utils/polymer';
 import auth from '../../core/auth';
 
+import '../about-page/about-page';
+import '../login-page/login-page';
+import '../logout-page/logout-page';
+import '../dashboard-page/dashboard-page';
+
 class AppShell {
   beforeRegister() {
     this.is = 'app-shell';
