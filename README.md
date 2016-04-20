@@ -18,5 +18,5 @@ gulp
 ## Gulp tasks
 This project comes with a set of gulp tasks:
 * **serve**: Build and serve the app with browsersync
-* **test*: run the test with webcomponent tester
+* **test**: run the test with webcomponent tester
 * **lint**: run eslint and jscs
